@@ -42,9 +42,6 @@
     color:var(--coral);
     margin-bottom:14px;
   }
-  .eyebrow::before{
-    content:"";width:22px;height:2px;background:var(--coral);border-radius:2px;
-  }
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
     padding:16px 32px;border-radius:100px;font-weight:800;font-size:15px;
@@ -257,6 +254,15 @@
   .service-card .service-body{padding:0 26px;}
   .service-card h3{font-size:19px;margin-bottom:10px;margin-top:12px;}
   .service-card p{font-size:14.5px;color:var(--ink-soft);}
+
+  /* icon-only cards (no photo thumbnail) */
+  .service-card--icon-only{padding:32px 26px;}
+  .service-card--icon-only .service-body{padding:0;}
+  .service-icon.standalone{
+    position:static;margin-bottom:20px;
+    width:56px;height:56px;border-radius:16px;
+  }
+  .service-icon.standalone svg{width:28px;height:28px;}
 
   /* alternate icon colors */
   .service-card:nth-child(4n+2) .service-icon{background:linear-gradient(135deg,var(--coral),var(--amber));}
