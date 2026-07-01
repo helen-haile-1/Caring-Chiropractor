@@ -1,4 +1,4 @@
-# Advantage Rehabilitation & Wellness Center — Website
+# Advantage Rehabilitation & Wellness Center Website
 
 A redesigned marketing site for Advantage Rehabilitation & Wellness Center (Dr. Rashida Cohen), Washington, DC.
 
@@ -11,6 +11,7 @@ A redesigned marketing site for Advantage Rehabilitation & Wellness Center (Dr. 
 │   └── style.css      All styles
 ├── js/
 │   └── main.js        Mobile nav toggle
+├── images/            Real practice photos (Dr. Cohen, patients, pediatric care)
 └── README.md
 ```
 
