@@ -70,60 +70,49 @@ a {
 
 .nav-shell {
   position: relative;
-  min-height: 76px;
+  min-height: 62px;
   display: flex;
   align-items: center;
   gap: 30px;
-  padding: 0 24px 0 174px;
+  padding: 0 24px;
 }
 
 .brand {
-  position: absolute;
-  left: 24px;
-  top: 10px;
+  position: relative;
+  left: auto;
+  top: auto;
   z-index: 2;
-  width: 122px;
-  height: 122px;
+  width: 174px;
+  height: auto;
   display: grid;
-  place-items: center;
-  border: 3px solid rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  color: var(--paper);
-  background: linear-gradient(135deg, var(--orange), var(--pink));
-  box-shadow: 0 16px 34px rgba(245, 44, 134, 0.18);
+  place-items: start;
+  border: 0;
+  border-radius: 0;
+  color: var(--orange);
+  background: transparent;
+  box-shadow: none;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 26px;
-  font-style: italic;
+  font-style: normal;
   font-weight: 600;
-  line-height: 0.86;
-  text-align: center;
+  line-height: 0.82;
+  text-align: left;
 }
 
 .brand::before,
 .brand::after {
-  content: "";
-  position: absolute;
-  inset: 7px;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  border-left-color: transparent;
-  border-radius: 50%;
-}
-
-.brand::after {
-  inset: 13px;
-  border-right-color: transparent;
-  transform: rotate(18deg);
+  display: none;
 }
 
 .brand small {
   display: block;
-  margin-top: 7px;
-  color: var(--paper);
+  margin-top: 10px;
+  color: #6c5a55;
   font-family: "Manrope", Arial, sans-serif;
-  font-size: 7px;
+  font-size: 9px;
   font-style: normal;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.44em;
   line-height: 1.15;
   text-transform: uppercase;
 }
@@ -201,7 +190,7 @@ a {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: calc(100vh - 76px);
+  min-height: calc(100vh - 62px);
   display: grid;
   align-items: center;
   color: var(--paper);
@@ -215,32 +204,40 @@ a {
   position: relative;
   z-index: 2;
   width: 100%;
-  min-height: calc(100vh - 76px);
+  min-height: calc(100vh - 62px);
   display: grid;
-  place-items: center;
-  padding: 96px 0 86px;
+  grid-template-columns: minmax(0, 0.86fr) minmax(360px, 0.74fr);
+  gap: clamp(28px, 5vw, 68px);
+  align-items: center;
+  justify-items: start;
+  padding: 76px 0 72px;
 }
 
 .hero-copy {
   position: relative;
   z-index: 4;
-  max-width: 840px;
-  padding: 56px clamp(28px, 6vw, 92px);
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 999px;
-  background:
-    radial-gradient(circle at 32% 44%, rgba(255, 255, 255, 0.32), transparent 42%),
-    linear-gradient(118deg, rgba(255, 255, 255, 0.22), rgba(245, 44, 134, 0.16));
-  box-shadow: 0 28px 70px rgba(83, 44, 31, 0.16);
-  text-align: center;
-  backdrop-filter: blur(5px);
+  width: 100%;
+  max-width: 720px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  text-align: left;
+  backdrop-filter: none;
 }
 
 .hero-media {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  inset: auto;
   z-index: 1;
+  width: 100%;
+  height: min(560px, 64vh);
+  min-height: 420px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 8px;
+  box-shadow: 0 24px 64px rgba(83, 44, 31, 0.22);
 }
 
 .hero-media::after {
@@ -248,8 +245,8 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(120deg, rgba(255, 131, 39, 0.82), rgba(255, 178, 63, 0.58) 35%, rgba(255, 111, 96, 0.62) 58%, rgba(245, 44, 134, 0.82)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(18, 11, 8, 0.08));
+    linear-gradient(120deg, rgba(255, 131, 39, 0.1), rgba(245, 44, 134, 0.18)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(18, 11, 8, 0.08));
 }
 
 .hero-media img {
@@ -277,19 +274,7 @@ a {
 }
 
 .hero-logo-card {
-  position: absolute;
-  right: 28px;
-  bottom: 26px;
-  z-index: 3;
-  display: grid;
-  gap: 2px;
-  padding: 12px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.74);
-  border-radius: 8px;
-  color: var(--paper);
-  background: rgba(29, 15, 11, 0.62);
-  box-shadow: 0 18px 42px rgba(83, 44, 31, 0.2);
-  text-align: center;
+  display: none;
 }
 
 .hero-logo-card span {
@@ -305,102 +290,6 @@ a {
   font-weight: 900;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-}
-
-.hero-anatomy-video {
-  position: absolute;
-  right: min(8vw, 96px);
-  top: 50%;
-  z-index: 2;
-  width: 150px;
-  height: 460px;
-  opacity: 0.26;
-  pointer-events: none;
-  transform: translateY(-50%) rotate(9deg);
-  filter: drop-shadow(0 26px 52px rgba(255, 255, 255, 0.2));
-}
-
-.hero-anatomy-video::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 16px;
-  width: 12px;
-  height: calc(100% - 32px);
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.18));
-  transform: translateX(-50%);
-  animation: spineBreath 4s ease-in-out infinite;
-}
-
-.hero-anatomy-video i {
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.24), transparent);
-  animation: anatomyScan 4.6s linear infinite;
-}
-
-.hero-anatomy-video span {
-  position: absolute;
-  left: 50%;
-  width: 72px;
-  height: 31px;
-  border: 3px solid rgba(255, 255, 255, 0.82);
-  border-left-width: 13px;
-  border-right-width: 13px;
-  border-radius: 50%;
-  transform: translateX(-50%) rotate(var(--turn));
-  animation: vertebraePulse 3.4s ease-in-out infinite;
-  animation-delay: calc(var(--i) * -0.16s);
-}
-
-.hero-anatomy-video span:nth-child(2) { top: 34px; --i: 1; --turn: -5deg; }
-.hero-anatomy-video span:nth-child(3) { top: 76px; --i: 2; --turn: 4deg; }
-.hero-anatomy-video span:nth-child(4) { top: 118px; --i: 3; --turn: -3deg; }
-.hero-anatomy-video span:nth-child(5) { top: 160px; --i: 4; --turn: 5deg; }
-.hero-anatomy-video span:nth-child(6) { top: 202px; --i: 5; --turn: -4deg; }
-.hero-anatomy-video span:nth-child(7) { top: 244px; --i: 6; --turn: 3deg; }
-.hero-anatomy-video span:nth-child(8) { top: 286px; --i: 7; --turn: -5deg; }
-.hero-anatomy-video span:nth-child(9) { top: 328px; --i: 8; --turn: 4deg; }
-.hero-anatomy-video span:nth-child(10) { top: 370px; --i: 9; --turn: -3deg; }
-
-@keyframes vertebraePulse {
-  0%, 100% {
-    opacity: 0.58;
-    transform: translateX(-50%) rotate(var(--turn)) scale(0.94);
-  }
-
-  50% {
-    opacity: 1;
-    transform: translateX(-50%) rotate(calc(var(--turn) * -1)) scale(1.05);
-  }
-}
-
-@keyframes spineBreath {
-  0%, 100% {
-    opacity: 0.62;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes anatomyScan {
-  0% {
-    opacity: 0;
-    transform: translateY(-90px);
-  }
-
-  28%, 70% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(90px);
-  }
 }
 
 @keyframes heroFade {
@@ -446,7 +335,7 @@ h2 {
 
 h1 {
   color: var(--paper);
-  font-size: clamp(52px, 6.6vw, 88px);
+  font-size: clamp(46px, 5vw, 66px);
 }
 
 h2 {
@@ -468,8 +357,8 @@ h3 {
 }
 
 .hero-copy p:not(.eyebrow) {
-  max-width: 700px;
-  margin: 24px auto 0;
+  max-width: 650px;
+  margin: 24px 0 0;
   color: rgba(255, 255, 255, 0.94);
   font-size: 19px;
   font-weight: 700;
@@ -480,9 +369,15 @@ h3 {
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 16px;
   margin-top: 34px;
+}
+
+.btn-outline {
+  color: var(--paper);
+  border-color: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .proof {
@@ -553,12 +448,9 @@ h3 {
 
 .service-card {
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 116px minmax(0, 1fr);
-  gap: 20px;
-  align-items: center;
-  min-height: 166px;
-  padding: 20px;
+  display: block;
+  min-height: 0;
+  padding: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
@@ -566,15 +458,15 @@ h3 {
 }
 
 .service-card img {
-  width: 116px;
-  height: 116px;
-  border-radius: 8px;
+  width: 100%;
+  height: 320px;
+  border-radius: 0;
   object-fit: cover;
 }
 
 .service-card div {
   min-width: 0;
-  padding: 0;
+  padding: 32px 36px 36px;
 }
 
 .service-card span {
@@ -983,14 +875,13 @@ h3 {
 @media (max-width: 1040px) {
   .nav-shell {
     min-height: 74px;
-    padding-left: 150px;
+    padding-left: 18px;
   }
 
   .brand {
-    top: 10px;
-    width: 108px;
-    height: 108px;
-    font-size: 23px;
+    width: 158px;
+    height: auto;
+    font-size: 24px;
   }
 
   .brand small {
@@ -1049,6 +940,7 @@ h3 {
   .proof-grid,
   .split,
   .service-grid,
+  .hero-layout,
   .about-layout,
   .specialty-layout,
   .contact-card {
@@ -1063,6 +955,11 @@ h3 {
   .service-card:nth-child(5) {
     grid-column: auto;
   }
+
+  .hero-media {
+    height: 430px;
+    min-height: 360px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1072,21 +969,12 @@ h3 {
 
   .nav-shell {
     min-height: 72px;
-    padding: 0 12px 0 100px;
+    padding: 0 12px;
   }
 
   .brand {
-    left: 12px;
-    top: 8px;
-    width: 82px;
-    height: 82px;
-    border-width: 2px;
-    font-size: 20px;
-  }
-
-  .brand::before,
-  .brand::after {
-    display: none;
+    width: 132px;
+    font-size: 22px;
   }
 
   .brand small {
@@ -1110,26 +998,11 @@ h3 {
 
   .hero-copy {
     border-radius: 8px;
-    padding: 34px 22px;
+    padding: 0;
   }
 
   .hero-logo-card {
     display: none;
-  }
-
-  .hero-anatomy-video {
-    right: -34px;
-    width: 96px;
-    height: 300px;
-    opacity: 0.18;
-  }
-
-  .hero-anatomy-video span {
-    width: 46px;
-    height: 21px;
-    border-width: 2px;
-    border-left-width: 8px;
-    border-right-width: 8px;
   }
 
   .eyebrow {
@@ -1160,15 +1033,11 @@ h3 {
   }
 
   .service-card {
-    grid-template-columns: 92px minmax(0, 1fr);
     min-height: 0;
-    gap: 14px;
-    padding: 14px;
   }
 
   .service-card img {
-    width: 92px;
-    height: 92px;
+    height: 240px;
   }
 
   .service-card span {
