@@ -87,8 +87,8 @@ a {
   border: 3px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   color: var(--paper);
-  background: linear-gradient(135deg, #4f879d, #123c5a);
-  box-shadow: 0 16px 34px rgba(18, 60, 90, 0.22);
+  background: linear-gradient(135deg, var(--orange), var(--pink));
+  box-shadow: 0 16px 34px rgba(245, 44, 134, 0.18);
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 26px;
   font-style: italic;
