@@ -4,6 +4,8 @@
   --blue: #4f879d;
   --blue-deep: #123c5a;
   --blue-soft: #e8f3f7;
+  --sky: #8ab7ff;
+  --electric: #4d7dff;
   --teal: #0e7f88;
   --gold: #ffb23f;
   --gold-soft: #fff0cc;
@@ -204,8 +206,9 @@ a {
   align-items: center;
   color: var(--paper);
   background:
-    radial-gradient(circle at 42% 55%, rgba(255, 204, 102, 0.48), transparent 30%),
-    linear-gradient(118deg, #ff7a1f 0%, #ff9f26 34%, #ff5d67 62%, #f52c86 100%);
+    radial-gradient(circle at 42% 30%, rgba(255, 255, 255, 0.38), transparent 35%),
+    radial-gradient(circle at 12% 22%, rgba(255, 178, 63, 0.74), transparent 38%),
+    linear-gradient(120deg, #ff8327 0%, #ffb23f 34%, #ff6f60 58%, #f52c86 100%);
 }
 
 .hero-layout {
@@ -219,13 +222,15 @@ a {
 }
 
 .hero-copy {
+  position: relative;
+  z-index: 4;
   max-width: 840px;
   padding: 56px clamp(28px, 6vw, 92px);
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 999px;
   background:
-    radial-gradient(circle at 24% 48%, rgba(255, 214, 120, 0.55), transparent 42%),
-    linear-gradient(118deg, rgba(255, 178, 63, 0.4), rgba(255, 120, 142, 0.46));
+    radial-gradient(circle at 32% 44%, rgba(255, 255, 255, 0.32), transparent 42%),
+    linear-gradient(118deg, rgba(255, 255, 255, 0.22), rgba(245, 44, 134, 0.16));
   box-shadow: 0 28px 70px rgba(83, 44, 31, 0.16);
   text-align: center;
   backdrop-filter: blur(5px);
@@ -243,8 +248,8 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255, 122, 35, 0.72), rgba(255, 159, 38, 0.48) 36%, rgba(245, 44, 134, 0.62)),
-    linear-gradient(180deg, rgba(18, 11, 8, 0.04), rgba(18, 11, 8, 0.2));
+    linear-gradient(120deg, rgba(255, 131, 39, 0.82), rgba(255, 178, 63, 0.58) 35%, rgba(255, 111, 96, 0.62) 58%, rgba(245, 44, 134, 0.82)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(18, 11, 8, 0.08));
 }
 
 .hero-media img {
@@ -300,6 +305,102 @@ a {
   font-weight: 900;
   letter-spacing: 0.22em;
   text-transform: uppercase;
+}
+
+.hero-anatomy-video {
+  position: absolute;
+  right: min(8vw, 96px);
+  top: 50%;
+  z-index: 2;
+  width: 150px;
+  height: 460px;
+  opacity: 0.26;
+  pointer-events: none;
+  transform: translateY(-50%) rotate(9deg);
+  filter: drop-shadow(0 26px 52px rgba(255, 255, 255, 0.2));
+}
+
+.hero-anatomy-video::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  width: 12px;
+  height: calc(100% - 32px);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.18));
+  transform: translateX(-50%);
+  animation: spineBreath 4s ease-in-out infinite;
+}
+
+.hero-anatomy-video i {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.24), transparent);
+  animation: anatomyScan 4.6s linear infinite;
+}
+
+.hero-anatomy-video span {
+  position: absolute;
+  left: 50%;
+  width: 72px;
+  height: 31px;
+  border: 3px solid rgba(255, 255, 255, 0.82);
+  border-left-width: 13px;
+  border-right-width: 13px;
+  border-radius: 50%;
+  transform: translateX(-50%) rotate(var(--turn));
+  animation: vertebraePulse 3.4s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -0.16s);
+}
+
+.hero-anatomy-video span:nth-child(2) { top: 34px; --i: 1; --turn: -5deg; }
+.hero-anatomy-video span:nth-child(3) { top: 76px; --i: 2; --turn: 4deg; }
+.hero-anatomy-video span:nth-child(4) { top: 118px; --i: 3; --turn: -3deg; }
+.hero-anatomy-video span:nth-child(5) { top: 160px; --i: 4; --turn: 5deg; }
+.hero-anatomy-video span:nth-child(6) { top: 202px; --i: 5; --turn: -4deg; }
+.hero-anatomy-video span:nth-child(7) { top: 244px; --i: 6; --turn: 3deg; }
+.hero-anatomy-video span:nth-child(8) { top: 286px; --i: 7; --turn: -5deg; }
+.hero-anatomy-video span:nth-child(9) { top: 328px; --i: 8; --turn: 4deg; }
+.hero-anatomy-video span:nth-child(10) { top: 370px; --i: 9; --turn: -3deg; }
+
+@keyframes vertebraePulse {
+  0%, 100% {
+    opacity: 0.58;
+    transform: translateX(-50%) rotate(var(--turn)) scale(0.94);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) rotate(calc(var(--turn) * -1)) scale(1.05);
+  }
+}
+
+@keyframes spineBreath {
+  0%, 100% {
+    opacity: 0.62;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes anatomyScan {
+  0% {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+
+  28%, 70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(90px);
+  }
 }
 
 @keyframes heroFade {
@@ -505,7 +606,7 @@ h3 {
 }
 
 .about {
-  background: linear-gradient(180deg, var(--blue-soft), var(--paper));
+  background: var(--paper);
 }
 
 .about-layout {
@@ -526,17 +627,17 @@ h3 {
   padding: 8px 18px;
   border-radius: 999px;
   color: var(--paper);
-  background: var(--blue);
+  background: var(--orange);
   font-size: 12px;
   font-weight: 900;
 }
 
 .credential-row span:nth-child(2) {
-  background: var(--gold);
+  background: var(--pink);
 }
 
 .credential-row span:nth-child(3) {
-  background: var(--teal);
+  background: var(--violet);
 }
 
 .about-copy p:not(.eyebrow) {
@@ -701,8 +802,9 @@ h3 {
   padding: 90px 0 100px;
   color: var(--paper);
   background:
-    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.18), transparent 28%),
-    linear-gradient(126deg, var(--blue-deep), var(--blue) 58%, var(--teal));
+    radial-gradient(circle at 42% 8%, rgba(255, 255, 255, 0.38), transparent 24%),
+    radial-gradient(circle at 16% 22%, rgba(255, 178, 63, 0.72), transparent 34%),
+    linear-gradient(120deg, #ff8327 0%, #ffb23f 34%, #ff6f60 58%, #f52c86 100%);
 }
 
 .contact-card {
@@ -1013,6 +1115,21 @@ h3 {
 
   .hero-logo-card {
     display: none;
+  }
+
+  .hero-anatomy-video {
+    right: -34px;
+    width: 96px;
+    height: 300px;
+    opacity: 0.18;
+  }
+
+  .hero-anatomy-video span {
+    width: 46px;
+    height: 21px;
+    border-width: 2px;
+    border-left-width: 8px;
+    border-right-width: 8px;
   }
 
   .eyebrow {
