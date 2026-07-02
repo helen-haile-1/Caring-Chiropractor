@@ -82,7 +82,7 @@ a {
   left: auto;
   top: auto;
   z-index: 2;
-  width: 174px;
+  width: 196px;
   height: auto;
   display: grid;
   place-items: start;
@@ -92,7 +92,7 @@ a {
   background: transparent;
   box-shadow: none;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 26px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: 0.82;
@@ -106,15 +106,16 @@ a {
 
 .brand small {
   display: block;
-  margin-top: 10px;
+  margin-top: 9px;
   color: #6c5a55;
   font-family: "Manrope", Arial, sans-serif;
-  font-size: 9px;
+  font-size: 8px;
   font-style: normal;
   font-weight: 800;
-  letter-spacing: 0.44em;
+  letter-spacing: 0.24em;
   line-height: 1.15;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -467,24 +468,6 @@ h3 {
 .service-card div {
   min-width: 0;
   padding: 32px 36px 36px;
-}
-
-.service-card span {
-  display: inline-grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  margin-bottom: 14px;
-  border-radius: 50%;
-  color: var(--orange);
-  background: #fff0e8;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 16px;
-}
-
-.service-card:nth-child(2n) span {
-  color: var(--pink);
-  background: #ffe8f2;
 }
 
 .service-card:nth-child(5) {
@@ -879,13 +862,14 @@ h3 {
   }
 
   .brand {
-    width: 158px;
+    width: 184px;
     height: auto;
-    font-size: 24px;
+    font-size: 23px;
   }
 
   .brand small {
-    font-size: 6px;
+    font-size: 7px;
+    letter-spacing: 0.2em;
   }
 
   .nav-links {
@@ -973,14 +957,14 @@ h3 {
   }
 
   .brand {
-    width: 132px;
+    width: 168px;
     font-size: 22px;
   }
 
   .brand small {
     margin-top: 6px;
     font-size: 6px;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
   }
 
   .legal-page {
@@ -1038,12 +1022,6 @@ h3 {
 
   .service-card img {
     height: 240px;
-  }
-
-  .service-card span {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 10px;
   }
 
   .about-image img {
