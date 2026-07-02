@@ -4,18 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advantage Rehabilitation & Wellness Center | Caring Chiropractor DC</title>
-  <meta name="description" content="Editorial, patient-centered chiropractic care in Washington, DC with Dr. Rashida Cohen. Auto accident recovery, back pain, family wellness, posture, and joint care.">
+  <meta name="description" content="Modern chiropractic care in Washington, DC with Dr. Rashida Cohen. Auto accident recovery, back pain, family wellness, posture, joint care, and same-week appointments.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav-shell" aria-label="Primary navigation">
       <a href="#top" class="brand" aria-label="Advantage Rehabilitation home">
-        <span class="brand-name">Advantage</span>
-        <span class="brand-sub">Rehab & Wellness - DC</span>
+        <span class="brand-mark" aria-hidden="true">AR</span>
+        <span>
+          Advantage Rehab
+          <small>Chiropractic & Wellness - DC</small>
+        </span>
       </a>
 
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false">
@@ -24,6 +27,7 @@
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
+        <li><a href="#specialties">Specialties</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -35,153 +39,182 @@
 
   <main id="top">
     <section class="hero">
-      <div class="wrap hero-grid">
+      <div class="wrap hero-layout">
         <div class="hero-copy">
-          <p class="eyebrow"><span></span>Washington, DC - 23+ years of care</p>
-          <h1>Feel your best, <em>live pain-free</em> for good.</h1>
-          <p class="lead">Advantage Rehabilitation & Wellness Center pairs hands-on chiropractic expertise with a plan built around your body, your pace, and your life. No shortcuts. No guesswork. Just real relief.</p>
+          <p class="eyebrow">Caring Chiropractor - Washington, DC</p>
+          <h1>Align, heal & thrive with care built around you.</h1>
+          <p>Hands-on chiropractic treatment for auto injuries, chronic back pain, posture, mobility, and family wellness. Clear plans, calm visits, real relief.</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Schedule an Appointment</a>
-            <a href="#services" class="btn btn-outline">Explore Services</a>
+            <a href="#contact" class="btn btn-primary">Schedule a Visit</a>
+            <a href="#services" class="btn btn-secondary">View Services</a>
           </div>
         </div>
-        <div class="hero-photo">
-          <img src="images/dr-cohen-adjustment.webp" alt="Dr. Rashida Cohen performing a chiropractic adjustment">
+
+        <div class="showcase" aria-label="Website style preview">
+          <div class="browser-card">
+            <div class="browser-top"><span></span><span></span><span></span></div>
+            <div class="browser-hero">
+              <img src="images/dr-cohen-adjustment.webp" alt="Dr. Rashida Cohen performing a chiropractic adjustment">
+              <div>
+                <p>Advantage Rehabilitation</p>
+                <h2>Live your life pain free.</h2>
+                <a href="#contact">Book Now</a>
+              </div>
+            </div>
+            <div class="browser-panel">
+              <img src="images/shoulder-pain-color.webp" alt="Person with shoulder pain">
+              <div>
+                <strong>Personalized care plan</strong>
+                <p>Assessment, adjustment, therapy, and recovery coaching in one coordinated visit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone-card" aria-hidden="true">
+            <div class="phone-speaker"></div>
+            <img src="images/auto-accident-neck-pain.webp" alt="">
+            <div>
+              <strong>Auto Injury Care</strong>
+              <p>Same-week appointments for whiplash, stiffness, and soft tissue pain.</p>
+              <span>Request Visit</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="proof-strip" aria-label="Practice highlights">
-      <div class="wrap proof-grid">
-        <div><span></span><strong>Evidence-Based</strong><p>Care rooted in clinical research</p></div>
-        <div><span></span><strong>Same-Week Visits</strong><p>Get in fast, feel better sooner</p></div>
-        <div><span></span><strong>Insurance Friendly</strong><p>We accept most major providers</p></div>
-        <div><span></span><strong>Hands-On Approach</strong><p>No shortcuts, no cookie-cutter plans</p></div>
+    <section class="proof">
+      <div class="wrap proof-grid" aria-label="Practice highlights">
+        <div><strong>23+</strong><span>Years serving DC</span></div>
+        <div><strong>Same-week</strong><span>Visit requests</span></div>
+        <div><strong>Family</strong><span>Wellness care</span></div>
+        <div><strong>Hands-on</strong><span>Evidence-based plans</span></div>
       </div>
     </section>
 
     <section class="section services" id="services">
       <div class="wrap">
-        <div class="section-heading">
-          <p class="kicker">Our Services</p>
-          <h2>Whole-body care designed for <em>lasting relief.</em></h2>
-          <p>Comprehensive, hands-on care for every stage of recovery - from your first adjustment to a stronger, more resilient you.</p>
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Featured Services</p>
+            <h2>Modern chiropractic care for everyday pain and recovery.</h2>
+          </div>
+          <p>Every service is designed to feel organized, reassuring, and easy to understand, from first assessment to long-term progress.</p>
         </div>
 
         <div class="service-grid">
           <article class="service-card">
-            <img src="images/dr-cohen-adjustment.webp" alt="Chiropractic adjustment at Advantage Rehabilitation">
+            <img src="images/dr-cohen-adjustment.webp" alt="Chiropractic spinal adjustment">
             <div>
               <span>01</span>
               <h3>Spinal Adjustments</h3>
-              <p>Precise corrections to restore movement, reduce nerve pressure, and help your body feel aligned again.</p>
+              <p>Precise alignment care to restore motion and reduce nerve irritation.</p>
             </div>
           </article>
-
-          <article class="service-card">
-            <img src="images/auto-accident-neck-pain.webp" alt="Person with neck pain after an auto accident">
+          <article class="service-card dark">
+            <img src="images/auto-accident-neck-pain.webp" alt="Auto accident neck pain">
             <div>
               <span>02</span>
               <h3>Auto Accident Recovery</h3>
-              <p>Focused care for whiplash, stiffness, soft tissue injuries, headaches, and pain after a collision.</p>
+              <p>Focused treatment for whiplash, headaches, and post-collision stiffness.</p>
             </div>
           </article>
-
           <article class="service-card">
-            <img src="images/shoulder-pain-color.webp" alt="Person holding a painful shoulder">
+            <img src="images/shoulder-pain-bw.webp" alt="Highlighted shoulder pain">
             <div>
               <span>03</span>
               <h3>Back & Shoulder Pain</h3>
-              <p>From degeneration to daily desk strain, we find the source of your pain and build a plan to resolve it.</p>
+              <p>Find the root source of pain, not just the loudest symptom.</p>
             </div>
           </article>
-
           <article class="service-card">
-            <img src="images/knee-exam.webp" alt="Clinician examining a patient's knee">
+            <img src="images/knee-exam.webp" alt="Knee examination">
             <div>
               <span>04</span>
-              <h3>Joint & Knee Care</h3>
-              <p>Practical support for sore knees, hips, ankles, and movement patterns that keep stress coming back.</p>
+              <h3>Knee & Joint Care</h3>
+              <p>Mobility plans for sore knees, hips, ankles, and unstable movement.</p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="specialties" id="specialties">
+      <div class="wrap specialty-layout">
+        <div class="specialty-card">
+          <p>9 chiropractic specialty types available</p>
+          <a href="#contact" class="btn btn-primary">Book Appointment</a>
+        </div>
+        <div class="specialty-list">
+          <span>Auto injury care</span>
+          <span>Neck pain</span>
+          <span>Back pain</span>
+          <span>Shoulder care</span>
+          <span>Knee care</span>
+          <span>Posture correction</span>
+          <span>Massage therapy</span>
+          <span>Family wellness</span>
+          <span>Sports recovery</span>
         </div>
       </div>
     </section>
 
     <section class="section about" id="about">
-      <div class="wrap about-grid">
+      <div class="wrap about-layout">
+        <div class="about-image browser-card small-browser">
+          <div class="browser-top"><span></span><span></span><span></span></div>
+          <img src="images/infant-adjustment.webp" alt="Gentle chiropractic care for an infant">
+        </div>
         <div class="about-copy">
-          <p class="kicker">Meet Dr. Cohen</p>
-          <h2>Where clinical science <em>meets empathy.</em></h2>
-          <p>Advantage Rehabilitation & Wellness Center was founded by Dr. Rashida Cohen on the belief that healthcare should be as human as it is clinical.</p>
-          <p>With more than two decades serving the DC community, she has seen firsthand how proper spinal care can change the way people work, parent, sleep, recover, and move through the world.</p>
-        </div>
-        <div class="about-card">
-          <img src="images/infant-adjustment.webp" alt="Gentle family chiropractic care with an infant">
-          <div>
-            <strong>Gentle care for every stage</strong>
-            <p>From newborn wellness to adult injury recovery, the care plan is always tailored to the person in front of us.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section families" id="families">
-      <div class="wrap">
-        <div class="section-heading wide-heading">
-          <p class="kicker">Family Wellness</p>
-          <h2>Care that supports the <em>whole family.</em></h2>
-        </div>
-        <div class="family-gallery">
-          <figure>
-            <img src="images/baby-adjustment.webp" alt="Gentle chiropractic care for a baby">
-          </figure>
-          <figure>
-            <img src="images/twins-carseats.webp" alt="Twin babies in car seats">
-          </figure>
-          <figure>
-            <img src="images/newborn-held.webp" alt="Newborn being held by a parent">
-          </figure>
+          <p class="eyebrow">Meet Dr. Cohen</p>
+          <h2>Clinical care with a calm, human touch.</h2>
+          <p>Dr. Rashida Cohen brings more than two decades of hands-on chiropractic care to patients across Washington, DC. Every plan starts with listening, then moves into a clear assessment and practical treatment strategy.</p>
+          <ul>
+            <li>Detailed posture and spinal assessments</li>
+            <li>Clear care plans with plain-language explanations</li>
+            <li>Gentle family wellness from newborns to adults</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="section reviews" id="reviews">
       <div class="wrap">
-        <div class="reviews-heading">
-          <h2>What our patients <em>say.</em></h2>
-          <div><strong>4.9</strong><span>Avg. Google Rating</span></div>
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Patient Stories</p>
+            <h2>Relief patients can feel and explain.</h2>
+          </div>
+          <p>Friendly, organized care with a focus on movement, comfort, and confidence.</p>
         </div>
 
-        <div class="review-list">
+        <div class="review-grid">
           <article>
-            <span>*****</span>
+            <span>5.0 / 5.0</span>
             <p>"After the first session, I finally slept through the night without shoulder pain. Dr. Cohen is truly a healer."</p>
             <strong>Marcus Thorne</strong>
-            <small>Patient since 2019</small>
           </article>
           <article>
-            <span>*****</span>
-            <p>"The level of care here is unmatched. They helped me recover from an auto accident faster than I ever expected."</p>
+            <span>5.0 / 5.0</span>
+            <p>"They helped me recover from an auto accident faster than I expected. Everything was explained clearly."</p>
             <strong>Danielle P.</strong>
-            <small>Auto injury recovery</small>
           </article>
         </div>
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <div class="wrap contact-inner">
+      <div class="wrap contact-card">
         <div>
-          <p class="eyebrow"><span></span>Ready when you are</p>
-          <h2>Start your recovery <em>this week.</em></h2>
-          <p>Book online in under a minute, or give us a call. Most new patients are seen within five business days.</p>
+          <p class="eyebrow">Ready when you are</p>
+          <h2>Start your recovery this week.</h2>
+          <p>Book online in under a minute, or call the Washington, DC office. Most new patients are seen within five business days.</p>
           <div class="contact-actions">
             <a href="tel:2025444478" class="btn btn-primary">Call (202) 544-4478</a>
-            <a href="#contact-form" class="btn btn-outline">Book Online</a>
+            <a href="https://maps.google.com/?q=641+Pennsylvania+Ave+SE,+Washington,+DC+20003" target="_blank" rel="noopener" class="btn btn-secondary">Get Directions</a>
           </div>
         </div>
-        <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formSuccess').hidden=false;">
+        <form class="contact-form" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formSuccess').hidden=false;">
           <label>
             Name
             <input type="text" name="name" placeholder="Your name" required>
@@ -200,10 +233,6 @@
               <option>Knee or joint care</option>
               <option>Family wellness</option>
             </select>
-          </label>
-          <label>
-            Message
-            <textarea name="message" placeholder="Tell us what is going on."></textarea>
           </label>
           <button class="btn btn-dark" type="submit">Request Appointment</button>
           <p class="form-success" id="formSuccess" hidden>Thank you. Our team will reach out shortly.</p>
