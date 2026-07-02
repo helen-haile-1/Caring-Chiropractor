@@ -1,21 +1,20 @@
 :root{
-    --navy-deep:#0F2F52;
-    --navy-mid:#123D6B;
-    --blue-vivid:#1E88E5;
-    --sky:#5FC3F7;
-    --teal:#00BFA6;
-    --coral:#FF7A59;
-    --amber:#FFB300;
-    --cream:#FFFFFF;
-    --paper:#F0F8FF;
-    --page-blue:#DFF1FE;
-    --panel-light:#CDEBFC;
-    --ink:#0F2F52;
-    --ink-soft:#3E6088;
-    --line:#CFE7F7;
+    --navy-deep:#102245;
+    --navy-mid:#2A4D8A;
+    --blue-vivid:#3F7BE4;
+    --sky:#67B7FF;
+    --teal:#1BBFAF;
+    --coral:#FF6A48;
+    --amber:#FFC35F;
+    --cream:#FFF8F2;
+    --paper:#FFF1E4;
+    --panel-light:#F5EBE2;
+    --ink:#111D36;
+    --ink-soft:#4D5E7F;
+    --line:#E9E5E0;
     --radius:24px;
-    --shadow-soft: 0 30px 60px -30px rgba(15,47,82,0.22);
-    --shadow-pop: 0 25px 55px -18px rgba(30,136,229,0.45);
+    --shadow-soft:0 25px 50px -25px rgba(16,34,69,0.18);
+    --shadow-pop:0 30px 70px -20px rgba(63,123,228,0.32);
   }
 
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -52,17 +51,18 @@
     font-family:'Inter',sans-serif;
   }
   .btn-primary{
-    background:linear-gradient(135deg,var(--blue-vivid),var(--navy-mid));
+    background:linear-gradient(135deg, var(--coral), var(--amber));
     color:#fff;
-    box-shadow:var(--shadow-pop);
+    border:1px solid rgba(63,123,228,0.22);
+    box-shadow:0 18px 40px -18px rgba(63,123,228,0.35);
   }
-  .btn-primary:hover{transform:translateY(-3px);background:linear-gradient(135deg,var(--sky),var(--blue-vivid));}
+  .btn-primary:hover{transform:translateY(-2px) scale(1.02);background:linear-gradient(135deg, var(--amber), var(--coral));}
   .btn-outline{
-    background:rgba(255,255,255,0.6);
-    border:1.5px solid rgba(31,52,80,0.18);
-    color:var(--navy-deep);
+    background:transparent;
+    border:2px solid rgba(63,123,228,0.35);
+    color:var(--blue-vivid);
   }
-  .btn-outline:hover{background:#fff;border-color:rgba(31,52,80,0.3);}
+  .btn-outline:hover{background:rgba(63,123,228,0.08);}
   .btn-navy{
     background:#fff;color:var(--navy-deep);border:1px solid var(--line);
     box-shadow:var(--shadow-soft);
@@ -130,7 +130,11 @@
   /* ---------- HERO ---------- */
   .hero{
     position:relative;
+<<<<<<< HEAD:style.css
     background:linear-gradient(180deg,#DFF1FE 0%,#EAF7FF 100%);
+=======
+    background:linear-gradient(140deg, rgba(63,123,228,0.22) 0%, rgba(255,154,105,0.14) 35%, rgba(255,255,255,0.96) 100%);
+>>>>>>> 8dac3a1 (Update site design and add Firebase hosting config):css/style.css
     overflow:hidden;
     padding:110px 0 140px;
   }
